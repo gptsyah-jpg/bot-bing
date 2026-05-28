@@ -1,0 +1,26 @@
+{
+  "name": "telegram-registration-bot",
+  "version": "1.0.0",
+  "description": "Telegram Bot + Web App Registration System with Slider Captcha",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "server": "node server.js",
+    "dev": "concurrently \"node bot.js\" \"node server.js\"",
+    "bot": "node bot.js",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "telegraf": "^4.16.3",
+    "express": "^4.18.2",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
