@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Verify Human</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-spinner"></div>
+    <p class="loading-text">Preparing verification...</p>
+  </div>
+  <div id="app" class="app hidden">
+    <div class="particles" id="particles"></div>
+    <div class="card">
+      <div class="card-header">
+        <div class="shield-icon">🛡️</div>
+        <h1>Human Verification</h1>
+        <p class="subtitle">Slide to complete the puzzle</p>
+      </div>
+      <div class="captcha-container">
+        <div class="puzzle-wrapper">
+          <canvas id="captcha-canvas" width="280" height="160"></canvas>
+          <canvas id="puzzle-piece" class="puzzle-piece-canvas"></canvas>
+        </div>
+        <div class="slider-container">
+          <div class="slider-track">
+            <div class="slider-fill" id="slider-fill"></div>
+            <div class="slider-thumb" id="slider-thumb">
+              <span class="thumb-arrows">⟫</span>
+            </div>
+          </div>
+          <p class="slider-hint">Drag to match the puzzle piece</p>
+        </div>
+        <button class="refresh-btn" id="refresh-btn">
+          <span class="refresh-icon">↻</span>
+        </button>
+      </div>
+      <div class="status-container" id="status-container">
+        <div class="status-message" id="status-message"></div>
+      </div>
+    </div>
+    <div class="success-overlay hidden" id="success-overlay">
+      <div class="success-card">
+        <div class="checkmark-circle">
+          <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark-circle-bg" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          </svg>
+        </div>
+        <h2>Verification Successful</h2>
+        <p>Redirecting back to bot...</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
